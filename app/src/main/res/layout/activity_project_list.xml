@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProjectsActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="164dp"
+        android:layout_height="18dp"
+        android:text="Association Les Tamaris"
+        app:layout_constraintBottom_toTopOf="@+id/Project_Liste"
+        app:layout_constraintEnd_toEndOf="@+id/Project_Liste"
+        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintStart_toStartOf="@+id/Project_Liste"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.789" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Project_Liste"
+        android:layout_width="match_parent"
+        android:layout_height="118dp"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="56dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Association_Name_I"
+        android:layout_width="155dp"
+        android:layout_height="21dp"
+        android:text="Association 1000 Espoir"
+        app:layout_constraintBottom_toTopOf="@+id/Project_ListeII"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/Project_Liste"
+        app:layout_constraintVertical_bias="0.578" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Project_ListeII"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/Project_Liste"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/Association_Name_II"
+        android:layout_width="155dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="16dp"
+        android:text="Association 1000 Espoir"
+        app:layout_constraintEnd_toEndOf="@+id/Association_Name_I"
+        app:layout_constraintStart_toStartOf="@+id/Association_Name_I"
+        app:layout_constraintTop_toBottomOf="@+id/Project_ListeII" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Project_ListeIII"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Association_Name_II" />
+
+
+    <TextView
+        android:id="@+id/Association_Name_III"
+        android:layout_width="155dp"
+        android:layout_height="21dp"
+        android:text="Association 1000 Espoir"
+        app:layout_constraintEnd_toEndOf="@+id/Association_Name_I"
+        app:layout_constraintStart_toStartOf="@+id/Association_Name_I"
+        app:layout_constraintTop_toBottomOf="@+id/Project_ListeIII" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Project_ListeIV"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Association_Name_III"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
