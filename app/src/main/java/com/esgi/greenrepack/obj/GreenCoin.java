@@ -3,28 +3,31 @@ package com.esgi.greenrepack.obj;
 import java.util.Date;
 
 public class GreenCoin {
-        int id;
-        Date CreeLe;
-        String Proprietaire;
+    Double montant;
+    Date dateExpiration;
+    int userId;
 
-    public int getId() {
-        return id;
+    public Double getMontant(){
+        return this.montant;
     }
 
-
-    public Date getCreeLe() {
-        return CreeLe;
+    public void setMontant(Double montant) {
+        this.montant = montant;
     }
 
-    public void setCreeLe(Date creeLe) {
-        CreeLe = creeLe;
+    public Date getDateExpiration() {
+        return dateExpiration;
     }
 
-    public String getProprietaire() {
-        return Proprietaire;
+    public void setDateExpiration(Date dateExpiration) {
+        this.dateExpiration = dateExpiration;
     }
 
-    public void setProprietaire(String proprietaire) {
-        Proprietaire = proprietaire;
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 }
