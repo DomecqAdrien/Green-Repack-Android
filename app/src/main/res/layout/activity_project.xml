@@ -7,16 +7,16 @@
     tools:context=".ProjectActivity">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/Description_Content"
         android:layout_width="390dp"
         android:layout_height="95dp"
         android:layout_marginTop="12dp"
         android:text="@string/Project_Description"
         android:textSize="11dp"
-        app:layout_constraintEnd_toEndOf="@+id/Project_Subtitle"
+        app:layout_constraintEnd_toEndOf="@+id/Project_Description_I"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/Project_Subtitle"
-        app:layout_constraintTop_toBottomOf="@+id/Project_Subtitle" />
+        app:layout_constraintStart_toStartOf="@+id/Project_Description_I"
+        app:layout_constraintTop_toBottomOf="@+id/Project_Description_I" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -26,20 +26,20 @@
         android:layout_marginTop="11dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Project_TitleII"
-        app:srcCompat="@drawable/ponttillionville"/>
+        app:srcCompat="@drawable/ponttillionville" />
 
     <TextView
-        android:id="@+id/Project_Subtitle"
+        android:id="@+id/Project_Description_I"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:text="@string/Project_Subtitle"
         android:textSize="11dp"
         android:textStyle="bold"
-        android:text="@string/Project_Subtitle"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/Project_TitleII"
@@ -52,7 +52,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"
@@ -65,17 +65,37 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/Description_Content" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/Project_price"
         android:layout_width="171dp"
-        android:layout_height="122dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="12dp"
         android:text="@string/Project_Caracteristique"
         android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"/>
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/Project_Start"
+        android:layout_width="171dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/Project_Caracteristique"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="@+id/Project_price"
+        app:layout_constraintTop_toBottomOf="@+id/Project_price" />
+
+    <TextView
+        android:id="@+id/Project_End"
+        android:layout_width="171dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/Project_Caracteristique"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="@+id/Project_Start"
+        app:layout_constraintTop_toBottomOf="@+id/Project_Start" />
 
     <TextView
         android:id="@+id/Picture_Subtitle"
@@ -85,8 +105,8 @@
         android:text="@string/Project_Subtitle"
         android:textSize="11dp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/Project_Subtitle"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintStart_toStartOf="@+id/Project_Description_I"
+        app:layout_constraintTop_toBottomOf="@+id/Description_Content" />
 
     <ImageView
         android:id="@+id/imageViewX"
