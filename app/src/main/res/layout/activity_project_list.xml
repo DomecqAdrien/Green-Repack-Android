@@ -7,7 +7,7 @@
     tools:context=".ProjectsActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/First_Association"
         android:layout_width="164dp"
         android:layout_height="18dp"
         android:text="Association Les Tamaris"
@@ -35,9 +35,9 @@
         android:layout_height="21dp"
         android:text="Association 1000 Espoir"
         app:layout_constraintBottom_toTopOf="@+id/Project_ListeII"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/First_Association"
         app:layout_constraintHorizontal_bias="0.062"
-        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/First_Association"
         app:layout_constraintTop_toBottomOf="@+id/Project_Liste"
         app:layout_constraintVertical_bias="0.578" />
 
