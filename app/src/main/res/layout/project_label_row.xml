@@ -7,7 +7,7 @@
 
 
         <TextView
-            android:id="@+id/ProjectLabel"
+            android:id="@+id/project_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
@@ -15,12 +15,12 @@
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="8dp"
-            app:layout_constraintEnd_toEndOf="@+id/ProjectThumbs"
-            app:layout_constraintStart_toStartOf="@+id/ProjectThumbs"
-            app:layout_constraintTop_toBottomOf="@+id/ProjectThumbs" />
+            app:layout_constraintEnd_toEndOf="@+id/project_image"
+            app:layout_constraintStart_toStartOf="@+id/project_image"
+            app:layout_constraintTop_toBottomOf="@+id/project_image" />
 
         <ImageView
-            android:id="@+id/ProjectThumbs"
+            android:id="@+id/project_image"
             android:layout_width="80dp"
             android:layout_height="80dp"
             app:layout_constraintEnd_toEndOf="parent"

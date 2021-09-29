@@ -7,6 +7,6 @@ data class Association (
     val rna: String?= null,
     val password: String? = null,
     var logo: String? = null,
-    var project: List<Project>? = null
+    var projects: List<Project>? = null
 )
 

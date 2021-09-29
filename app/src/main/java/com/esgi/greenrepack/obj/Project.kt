@@ -7,7 +7,8 @@ data class Project(
     var libelle: String? = null,
     var description: String? = null,
     var somme: Double? = null,
-    var dateDebut: Date? = null,
-    var dateFin: Date? = null,
-    var associationId: Int = 0
+    var dateDebut: String? = null,
+    var dateFin: String? = null,
+    var associationId: Int = 0,
+    var logo: String? = null
 )

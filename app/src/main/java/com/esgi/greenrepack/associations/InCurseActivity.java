@@ -30,8 +30,8 @@ public class InCurseActivity extends AppCompatActivity {
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL, false);
         recyclerViewX.setLayoutManager(mLayoutManager);
 
-        RecyclerView.Adapter recyclerViewAdapter = new ProjectAdapter(ProjectList, Labels, this);
-        recyclerViewX.setAdapter(recyclerViewAdapter);
+        //RecyclerView.Adapter recyclerViewAdapter = new ProjectAdapter(ProjectList, Labels, this);
+       // recyclerViewX.setAdapter(recyclerViewAdapter);
         return recyclerViewX;
 
 
