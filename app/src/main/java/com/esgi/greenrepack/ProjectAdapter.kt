@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.esgi.greenrepack.ProjectAdapter.MyViewHolder
-import com.esgi.greenrepack.obj.Project
+import com.esgi.greenrepack.models.Project
 import kotlinx.android.synthetic.main.project_label_row.view.*
 
 class ProjectAdapter(private val projects: List<Project>, private val context: Context) : RecyclerView.Adapter<MyViewHolder>() {
@@ -22,9 +22,10 @@ class ProjectAdapter(private val projects: List<Project>, private val context: C
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        val project = projects[position]
         holder.itemView.setOnClickListener {
             val intent = Intent(context, ProjectActivity::class.java)
-            //intent.putExtra("film_id",film.id)
+            intent.putExtra("project", project)
             context.startActivity(intent)
         }
         holder.projectLabel.text = projects[position].libelle

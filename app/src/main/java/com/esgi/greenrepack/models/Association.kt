@@ -1,4 +1,4 @@
-package com.esgi.greenrepack.obj
+package com.esgi.greenrepack.models
 
 data class Association (
     val id: Int? = 0,

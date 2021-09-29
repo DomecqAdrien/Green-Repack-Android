@@ -1,7 +1,9 @@
-package com.esgi.greenrepack.obj
+package com.esgi.greenrepack.models
 
-import java.util.*
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class Project(
     var id: Int = 0,
     var libelle: String? = null,
@@ -11,4 +13,4 @@ data class Project(
     var dateFin: String? = null,
     var associationId: Int = 0,
     var logo: String? = null
-)
+) : Parcelable

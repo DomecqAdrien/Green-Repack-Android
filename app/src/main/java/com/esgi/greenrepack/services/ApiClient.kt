@@ -36,7 +36,7 @@ object ApiClient {
             .baseUrl(BASE_URL)
             .client(httpClient)
             .addConverterFactory(ScalarsConverterFactory.create())
-            .addConverterFactory(GsonConverterFactory.create(gson))
+            .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
 

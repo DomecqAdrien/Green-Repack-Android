@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.esgi.greenrepack.obj.Association
+import com.esgi.greenrepack.models.Association
 import kotlinx.android.synthetic.main.association_role.view.*
 
 class AssociationAdapter(private val context: Context): RecyclerView.Adapter<AssociationAdapter.AssociationViewHolder>() {

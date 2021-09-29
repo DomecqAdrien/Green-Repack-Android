@@ -7,7 +7,8 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
 import android.widget.Toast
-import com.esgi.greenrepack.obj.Utilisateur
+import com.esgi.greenrepack.associations.InCurseActivity
+import com.esgi.greenrepack.models.Utilisateur
 import com.esgi.greenrepack.services.ApiClient
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.coroutines.Dispatchers
@@ -46,12 +47,12 @@ class LoginAssociationActivity : AppCompatActivity() {
                 if (response.isSuccessful && response.body() != null) {
                     val content = response.body()!!
                     Log.i("jwt",content.token)
-                    val sharedPrefs = this@LoginAssociationActivity.getPreferences(Context.MODE_PRIVATE)
+                    val sharedPrefs = this@LoginAssociationActivity.getSharedPreferences("prefs", Context.MODE_PRIVATE)
                     with (sharedPrefs.edit()) {
                         putString("jwt", content.token)
                         apply()
                     }
-                    startActivity(Intent(this@LoginAssociationActivity, ProjectsActivity::class.java))
+                    startActivity(Intent(this@LoginAssociationActivity, InCurseActivity::class.java))
 
                 } else {
                     Log.e("Error Occured", response.message())

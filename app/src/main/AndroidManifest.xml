@@ -16,10 +16,11 @@
         <activity android:name=".RegisterAssociationActivity"></activity>
         <activity android:name=".LoginAssociationActivity" />
         <activity android:name=".LoginActivity">
-<<<<<<< HEAD
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-=======
->>>>>>> e230f9b377806cf2cc6b2a54095945574dff68f7
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".Green_Coin_DetailActivity2"></activity>
         <activity android:name=".associations.Create_SuccessActivity" />
@@ -28,23 +29,11 @@
 
         </activity>
         <activity android:name=".GreenCoinsActivity" />
-<<<<<<< HEAD
+
+        <activity android:name=".ProjectActivity"/>
         <activity android:name=".ProjectsActivity">
 
-=======
-        <activity android:name=".ProjectsActivity" />
-        <activity android:name=".ProjectActivity">
->>>>>>> e230f9b377806cf2cc6b2a54095945574dff68f7
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-<<<<<<< HEAD
-        <activity android:name=".ProjectActivity" />
-=======
->>>>>>> e230f9b377806cf2cc6b2a54095945574dff68f7
         <activity android:name=".MainActivity" />
     </application>
 

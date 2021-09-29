@@ -10,7 +10,7 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import com.esgi.greenrepack.obj.Association
+import com.esgi.greenrepack.models.Association
 import com.esgi.greenrepack.services.ApiClient
 import kotlinx.android.synthetic.main.activity_project.*
 import kotlinx.android.synthetic.main.activity_register_association.*
@@ -74,14 +74,6 @@ class RegisterAssociationActivity : AppCompatActivity() {
         tvLoginError.text = message
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == Activity.RESULT_OK && requestCode == 69){
-            imageView.setImageURI(data?.data) // handle chosen image
-        }
-    }
-
-
 
     private fun uploadImage(association: Association, image: String) {
         GlobalScope.launch(Dispatchers.Main) {
@@ -120,7 +112,7 @@ class RegisterAssociationActivity : AppCompatActivity() {
                 if (response.isSuccessful && response.body() != null) {
                     Log.i("response", response.body().toString())
                     val content = response.body()!!
-                    val sharedPrefs = this@RegisterAssociationActivity.getPreferences(Context.MODE_PRIVATE)
+                    val sharedPrefs = this@RegisterAssociationActivity.getSharedPreferences("prefs", Context.MODE_PRIVATE)
                     with (sharedPrefs.edit()) {
                         putString("jwt", content.token)
                         apply()

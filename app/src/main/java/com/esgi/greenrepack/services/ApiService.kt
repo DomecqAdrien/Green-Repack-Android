@@ -1,8 +1,8 @@
 package com.esgi.greenrepack.services
 
-import com.esgi.greenrepack.obj.Association
-import com.esgi.greenrepack.obj.JwtResponse
-import com.esgi.greenrepack.obj.Utilisateur
+import com.esgi.greenrepack.models.Association
+import com.esgi.greenrepack.models.JwtResponse
+import com.esgi.greenrepack.models.Utilisateur
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
