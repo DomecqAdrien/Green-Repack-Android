@@ -4,4 +4,26 @@
     <string name="Project_Title">Association 1000 Espoir</string>
     <string name="Project_Caracteristique">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
     <string name="Project_Subtitle">Construction de route Maroc</string>
+    <string name="apiUrl"></string>
+
+    <string name="login">Se connecter</string>
+    <string name="forget_paswword">Mot de passe oublié ?</string>
+    <string name="sign_in">Inscription (association)</string>
+
+    <string name="form_login_email">Email</string>
+    <string name="form_login_password">Mot de passe</string>
+    <string name="form_login_error_missing_field">Veuillez saisir votre email et mot de passe pour vous connecter</string>
+
+    <string name="action_login">Connexion</string>
+    <string name="action_logout">Déconnexion</string>
+    <string name="action_forget_paswword">Mot de passe oublié ?</string>
+    <string name="action_login_assoc">Se connecter en tant qu\'association</string>
+    <string name="action_signin">Inscrire une association</string>
+
+    <string name="register_nom">Nom de l\'association</string>
+    <string name="register_rna">N° RNA</string>
+    <string name="register_logo">Uploader un logo</string>
+    <string name="register_association">Enregistrer une association</string>
+    <string name="register_button">S\'inscrire</string>
+
 </resources>
