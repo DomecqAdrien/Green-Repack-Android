@@ -19,7 +19,7 @@ class RegisterAssociationActivity : AppCompatActivity() {
                 val intent = Intent(Intent.ACTION_PICK)
                 intent.type ="image/*"
                 //registerForActivityResult(intent, 69)
-                startActivityForResult(intent, 69);
+                startActivity(intent)
         }
     }
 
