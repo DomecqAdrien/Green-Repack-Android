@@ -12,16 +12,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GreenRepack">
+
         <activity android:name=".RegisterAssociationActivity"></activity>
         <activity android:name=".LoginAssociationActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".Green_Coin_DetailActivity2"></activity>
+        <activity android:name=".associations.Create_SuccessActivity" />
+        <activity android:name=".associations.ProjectAddActivity" />
+        <activity android:name=".associations.InCurseActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".associations.InCurseActivity" />
         <activity android:name=".GreenCoinsActivity" />
         <activity android:name=".ProjectsActivity" />
         <activity android:name=".ProjectActivity" />
