@@ -2,27 +2,22 @@ package com.esgi.greenrepack.obj;
 
 public class Utilisateur {
 
-    int id;
-    String Nom;
-    String Prenom;
+    String email;
+    String password;
 
-    public int getId() {
-        return id;
+    public String getEmail() {
+        return this.email;
     }
 
-    public String getNom() {
-        return Nom;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public void setNom(String nom) {
-        Nom = nom;
+    public String getPassword() {
+        return this.password;
     }
 
-    public String getPrenom() {
-        return Prenom;
-    }
-
-    public void setPrenom(String prenom) {
-        Prenom = prenom;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

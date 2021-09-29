@@ -4,32 +4,49 @@ import java.util.ArrayList;
 
 public class Association {
     int id;
-    String Denomination_Social;
-    String Adresse;
-    String Numero_RNA;
+    String nom;
+    String email;
+    String password;
+    String logo;
 
     public int getId() {
         return id;
     }
 
-    public String getDenomination_Social() {
-        return Denomination_Social;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setDenomination_Social(String denomination_Social) {
-        Denomination_Social = denomination_Social;
+    public String getNom() {
+        return this.nom;
     }
 
-    public String getAdresse() {
-        return Adresse;
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
-    public void setAdresse(String adresse) {
-        Adresse = adresse;
+    public String getLogo() {
+        return this.logo;
     }
 
-    public String getNumero_RNA() {
-        return Numero_RNA;
+    public void setLogo(String logo) {
+        this.logo = logo;
+    }
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return this.password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
 }

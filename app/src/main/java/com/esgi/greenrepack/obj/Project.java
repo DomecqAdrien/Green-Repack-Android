@@ -1,28 +1,70 @@
 package com.esgi.greenrepack.obj;
 
+import java.util.Date;
+
 public class Project {
 
     int id;
-    String Name;
-    String Description;
+    String libelle;
+    String description;
+    Double somme;
+    Date dateDebut;
+    Date dateFin;
+    int associationId;
 
     public int getId() {
         return id;
     }
 
-    public String getName() {
-        return Name;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setName(String name) {
-        Name = name;
+    public String getLibelle() {
+        return libelle;
+    }
+
+    public void setLibelle(String libelle) {
+        this.libelle = libelle;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
+    }
+
+    public Double getSomme() {
+        return somme;
+    }
+
+    public void setSomme(Double somme) {
+        this.somme = somme;
+    }
+
+    public Date getDateDebut() {
+        return dateDebut;
+    }
+
+    public void setDateDebut(Date dateDebut) {
+        this.dateDebut = dateDebut;
+    }
+
+    public Date getDateFin() {
+        return dateFin;
+    }
+
+    public void setDateFin(Date dateFin) {
+        this.dateFin = dateFin;
+    }
+
+    public int getAssociationId() {
+        return associationId;
+    }
+
+    public void setAssociationId(int associationId) {
+        this.associationId = associationId;
     }
 }
