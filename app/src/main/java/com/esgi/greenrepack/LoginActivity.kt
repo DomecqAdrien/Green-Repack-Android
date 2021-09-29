@@ -41,18 +41,16 @@ class LoginActivity : AppCompatActivity() {
     private fun login(user: Utilisateur) {
         GlobalScope.launch(Dispatchers.Main) {
             try {
-                Log.i("user", user.toString())
-                Log.i("test","tyes")
                 val response = ApiClient.apiService.login(user)
 
                 if (response.isSuccessful && response.body() != null) {
                     val content = response.body()!!
-                    Log.i("jwt",content.token)
                     val sharedPrefs = this@LoginActivity.getPreferences(Context.MODE_PRIVATE)
                     with (sharedPrefs.edit()) {
                         putString("jwt", content.token)
                         apply()
                     }
+                    startActivity(Intent(this@LoginActivity, ProjectsActivity::class.java))
                     getAssoc()
 
                 } else {

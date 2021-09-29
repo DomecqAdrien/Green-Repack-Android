@@ -49,7 +49,9 @@ class LoginAssociationActivity : AppCompatActivity() {
                     val sharedPrefs = this@LoginAssociationActivity.getPreferences(Context.MODE_PRIVATE)
                     with (sharedPrefs.edit()) {
                         putString("jwt", content.token)
+                        apply()
                     }
+                    startActivity(Intent(this@LoginAssociationActivity, ProjectsActivity::class.java))
 
                 } else {
                     Log.e("Error Occured", response.message())
