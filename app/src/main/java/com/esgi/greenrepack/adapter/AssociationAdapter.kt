@@ -1,4 +1,4 @@
-package com.esgi.greenrepack
+package com.esgi.greenrepack.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,8 +7,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.esgi.greenrepack.R
 import com.esgi.greenrepack.models.Association
-import kotlinx.android.synthetic.main.association_role.view.*
+import kotlinx.android.synthetic.main.association_row.view.*
 
 class AssociationAdapter(private val context: Context): RecyclerView.Adapter<AssociationAdapter.AssociationViewHolder>() {
     var associations: List<Association> = emptyList()
@@ -19,7 +20,7 @@ class AssociationAdapter(private val context: Context): RecyclerView.Adapter<Ass
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AssociationViewHolder {
         val inflater = LayoutInflater.from(context)
-        val view = inflater.inflate(R.layout.association_role, parent, false)
+        val view = inflater.inflate(R.layout.association_row, parent, false)
         return AssociationViewHolder(view)
     }
 
@@ -30,7 +31,7 @@ class AssociationAdapter(private val context: Context): RecyclerView.Adapter<Ass
 
         holder.projects.apply {
             layoutManager = projectLayoutManager
-            adapter = ProjectAdapter(association.projects!!, context)
+            adapter = ProjectAdapter(association.projets, association.nom, context)
             setRecycledViewPool(recycledViewPool)
         }
 

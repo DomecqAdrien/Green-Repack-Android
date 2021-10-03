@@ -12,29 +12,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GreenRepack">
-
-        <activity android:name=".RegisterAssociationActivity"></activity>
-        <activity android:name=".LoginAssociationActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".connexion.LoadingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Green_Coin_DetailActivity2"></activity>
-        <activity android:name=".associations.Create_SuccessActivity" />
-        <activity android:name=".associations.ProjectAddActivity" />
-        <activity android:name=".associations.InCurseActivity">
-
-        </activity>
-        <activity android:name=".GreenCoinsActivity" />
-
-        <activity android:name=".ProjectActivity"/>
-        <activity android:name=".ProjectsActivity">
-
-        </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".connexion.RegisterAssociationActivity" />
+        <activity android:name=".connexion.LoginAssociationActivity" />
+        <activity android:name=".connexion.LoginActivity"/>
+        <activity android:name=".associations.SuccessActivity" />
+        <activity android:name=".associations.CreateProjectActivity" />
+        <activity android:name=".associations.AssociationMainPageActivity" />
+        <activity android:name=".UserDetailsActivity" />
+        <activity android:name=".ProjectDetailActivity" />
+        <activity android:name=".ProjectListActivity" />
     </application>
 
 </manifest>

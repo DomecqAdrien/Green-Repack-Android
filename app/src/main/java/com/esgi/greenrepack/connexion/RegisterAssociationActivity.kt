@@ -1,4 +1,4 @@
-package com.esgi.greenrepack
+package com.esgi.greenrepack.connexion
 
 import android.app.Activity
 import android.content.Context
@@ -8,8 +8,12 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.result.ActivityResult
+import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import com.esgi.greenrepack.ProjectListActivity
+import com.esgi.greenrepack.R
+import com.esgi.greenrepack.associations.AssociationMainPageActivity
 import com.esgi.greenrepack.models.Association
 import com.esgi.greenrepack.services.ApiClient
 import kotlinx.android.synthetic.main.activity_project.*
@@ -25,19 +29,23 @@ import java.util.*
 class RegisterAssociationActivity : AppCompatActivity() {
 
     var byteImage: String? = null
+    private lateinit var startForResult: ActivityResultLauncher<Intent>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register_association)
 
 
-        val startForResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+        startForResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             result: ActivityResult  ->
                 if(result.resultCode == Activity.RESULT_OK) {
                     val stream = contentResolver.openInputStream(result.data!!.data!!)
                     val data: ByteArray = stream!!.readBytes()
                     byteImage = Base64.getEncoder().encodeToString(data)
                     stream.close()
+                }
+                if(result.resultCode == 80) {
+                    finish()
                 }
         }
 
@@ -55,11 +63,12 @@ class RegisterAssociationActivity : AppCompatActivity() {
                     if (isNullOrBlank()) {
                         displayError("Veuillez Télécharger un logo")
                     } else {
-                        var association = Association(
+                        val association = Association(
                             nom = etNom.text.toString(),
                             email = etEmail.text.toString(),
                             rna = etRNA.text.toString(),
-                            password = etPassword.text.toString()
+                            password = etPassword.text.toString(),
+                            projets = listOf()
                         )
                         uploadImage(association, this)
                     }
@@ -68,7 +77,7 @@ class RegisterAssociationActivity : AppCompatActivity() {
         }
     }
 
-    fun displayError(message: String) {
+    private fun displayError(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
         tvLoginError.visibility = View.VISIBLE
         tvLoginError.text = message
@@ -117,7 +126,7 @@ class RegisterAssociationActivity : AppCompatActivity() {
                         putString("jwt", content.token)
                         apply()
                     }
-                    startActivity(Intent(this@RegisterAssociationActivity, ProjectsActivity::class.java))
+                    startForResult.launch(Intent(this@RegisterAssociationActivity, AssociationMainPageActivity::class.java))
                 } else {
                     displayError("Error Occured")
                     Log.e("Error Occured", response.toString())

@@ -27,7 +27,7 @@ object ApiClient {
     private val httpClient : OkHttpClient by lazy {
         OkHttpClient
             .Builder()
-            //.addInterceptor(logging)
+            .addInterceptor(logging)
             .build()
     }
 
@@ -36,7 +36,7 @@ object ApiClient {
             .baseUrl(BASE_URL)
             .client(httpClient)
             .addConverterFactory(ScalarsConverterFactory.create())
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
     }
 

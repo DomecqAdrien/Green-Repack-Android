@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white">
+    android:layout_height="match_parent">
 
 
     <ImageView
@@ -12,7 +11,7 @@
         android:layout_width="174dp"
         android:layout_height="163dp"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="28dp"
         android:adjustViewBounds="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -35,106 +34,76 @@
         app:layout_constraintTop_toBottomOf="@+id/login_logo_image" />
 
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="88dp"
-        android:text="@string/login"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        android:layout_width="190dp"
-        android:layout_height="60dp"
-        android:background="@drawable/boarder"
-        app:boxStrokeColor="@color/colorPrimary"
-        app:counterTextColor="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="@+id/emailInput"
-        app:layout_constraintEnd_toStartOf="@+id/textInputLayout2"
-        app:layout_constraintStart_toStartOf="@+id/emailInput"
-        app:layout_constraintTop_toTopOf="@+id/emailInput">
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
-        android:layout_width="190dp"
-        android:layout_height="60dp"
-        android:background="@drawable/boarder"
-        app:boxStrokeColor="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="@+id/passwordInput"
-        app:layout_constraintStart_toStartOf="@+id/passwordInput"
-        app:layout_constraintTop_toTopOf="@+id/passwordInput">
-
-    </com.google.android.material.textfield.TextInputLayout>
-
     <Button
-        android:id="@+id/loginButton"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:id="@+id/btn_login_association"
+        android:layout_width="376dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
         android:background="@color/green_button"
         android:text="@string/action_login"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/emailInput" />
 
     <Button
-        android:id="@+id/signInButton"
+        android:id="@+id/btn_inscription"
         android:layout_width="270dp"
         android:layout_height="46dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="56dp"
+        android:layout_marginTop="16dp"
         android:layout_weight="1"
         android:background="@android:color/transparent"
         android:text="@string/sign_in"
         android:textColor="@color/colorPrimary"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/loginButton"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login_association" />
+
+    <Button
+        android:id="@+id/btn_connect_client"
+        android:layout_width="270dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:text="Connexion (Client)"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_inscription" />
 
     <EditText
         android:id="@+id/passwordInput"
         android:layout_width="190dp"
         android:layout_height="60dp"
+        android:layout_marginTop="28dp"
         android:hint="@string/form_login_password"
         android:inputType="textPassword"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
         android:textColorHint="@color/colorPrimary"
-        android:theme="@style/EditTextLightTheme"
-        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout"
-        app:layout_constraintEnd_toEndOf="@+id/loginButton"
-        app:layout_constraintTop_toTopOf="@+id/textInputLayout"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/emailInput"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
         android:id="@+id/emailInput"
         android:layout_width="190dp"
         android:layout_height="60dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
         android:hint="@string/form_login_email"
         android:inputType="textEmailAddress"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
         android:textColorHint="@color/colorPrimary"
-        android:theme="@style/EditTextLightTheme"
-        app:layout_constraintEnd_toStartOf="@+id/textInputLayout2"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="@+id/loginButton"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/tvLoginError"
