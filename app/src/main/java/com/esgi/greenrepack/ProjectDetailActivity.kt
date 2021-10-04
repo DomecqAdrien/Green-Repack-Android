@@ -44,6 +44,16 @@ class ProjectDetailActivity : AppCompatActivity() {
         tk = TokenManager(this)
         projet = intent.getParcelableExtra("projet")!!
         association = intent.getStringExtra("association").toString()
+
+
+        startForResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+                result: ActivityResult ->
+            if(result.resultCode == 100) {
+                binding.etInvestAmount.text.clear()
+                getCoins()
+
+            }
+        }
         getCoins()
 
     }
@@ -79,14 +89,6 @@ class ProjectDetailActivity : AppCompatActivity() {
                     else -> createInvestment(Investment(montant = amount.toInt(), projetId = projet.id!!))
                 }
             }
-
-            startForResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-                    result: ActivityResult ->
-                if(result.resultCode == 100) {
-                    etInvestAmount.text.clear()
-
-                }
-            }
         }
     }
 
@@ -98,6 +100,7 @@ class ProjectDetailActivity : AppCompatActivity() {
     private fun createInvestment(investment: Investment) {
         GlobalScope.launch(Dispatchers.Main) {
             try {
+                setContentView(R.layout.activity_loading)
                 val response = ApiClient.apiService.invest("Bearer ${tk.token}", investment)
                 if (response.isSuccessful && response.body() != null) {
                     Log.i("response", response.body().toString())

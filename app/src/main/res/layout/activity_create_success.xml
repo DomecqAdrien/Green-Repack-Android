@@ -37,7 +37,7 @@
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:background="#009EE2"
+        android:background="@color/green_button"
         android:text="@string/retour"
         android:textColor="@color/white"
         android:textSize="20sp"

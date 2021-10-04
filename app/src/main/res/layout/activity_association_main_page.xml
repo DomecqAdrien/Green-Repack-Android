@@ -8,8 +8,8 @@
 
     <Button
         android:id="@+id/btn_new_project"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="248dp"
+        android:layout_height="65dp"
         android:layout_marginTop="584dp"
         android:background="@color/green_button"
         android:text="@string/projet_ajout_bouton"
