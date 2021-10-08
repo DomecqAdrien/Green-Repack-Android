@@ -27,7 +27,7 @@ object ApiClient {
     private val httpClient : OkHttpClient by lazy {
         OkHttpClient
             .Builder()
-            .addInterceptor(logging)
+            //.addInterceptor(logging)
             .build()
     }
 

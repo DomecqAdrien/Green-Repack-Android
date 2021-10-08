@@ -29,7 +29,9 @@ class LoadingActivity : AppCompatActivity() {
 
         startForResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
                 result: ActivityResult ->
-            if(result.resultCode == 90) {
+            Log.i("resCode", result.resultCode.toString())
+            if(result.resultCode == 80) {
+                Log.i("resCode", "80")
                 checkIsLogged()
             }
         }
@@ -40,12 +42,15 @@ class LoadingActivity : AppCompatActivity() {
     }
 
     private fun checkIsLogged() {
+        Log.i("isLogged", tk.isLogged.toString())
+        Log.i("isExpired", tk.isExpired.toString())
         if (tk.isLogged && !tk.isExpired) {
             Log.i("token", tk.token)
+            Log.i("role", tk.role.toString())
             if(tk.role == "Association") {
                 startActivity(Intent(this, AssociationMainPageActivity::class.java))
             }
-            if(tk.role == "Utilisateur") {
+            if(tk.role == "Utilisateur" || tk.role == "Marchand") {
                 startActivity(Intent(this, ProjectListActivity::class.java))
             }
         } else {

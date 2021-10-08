@@ -1,18 +1,17 @@
 package com.esgi.greenrepack.connexion
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
 import android.view.View
 import android.widget.Toast
-import com.esgi.greenrepack.services.TokenManager
+import androidx.appcompat.app.AppCompatActivity
 import com.esgi.greenrepack.ProjectListActivity
 import com.esgi.greenrepack.R
-import com.esgi.greenrepack.associations.AssociationMainPageActivity
 import com.esgi.greenrepack.models.Utilisateur
 import com.esgi.greenrepack.services.ApiClient
+import com.esgi.greenrepack.services.TokenManager
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_login.tvLoginError
 import kotlinx.android.synthetic.main.activity_register_association.*
@@ -68,10 +67,12 @@ class LoginActivity : AppCompatActivity() {
                     tk.storeToken(content.token)
                     startActivity(Intent(this@LoginActivity, ProjectListActivity::class.java))
                 } else {
-                    Log.e("Error Occured", response.message())
+                    displayError(response.errorBody()!!.string())
+                    Log.e("Error Occured", response.errorBody()!!.string())
                 }
 
             } catch (e: Exception) {
+                displayError(e.message!!)
                 Log.e("Exception Occured", e.message!!)
             }
         }
